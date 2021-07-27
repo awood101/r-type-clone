@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://MAIN.gd" type="Script" id=1]
+[ext_resource path="res://ParallaxLayer.gd" type="Script" id=2]
+[ext_resource path="res://seamless-2033674_1920.jpg" type="Texture" id=3]
+
+[node name="MAIN" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+show_behind_parent = true
+motion_scale = Vector2( 0.1, 0.1 )
+motion_mirroring = Vector2( 1920, 1920 )
+script = ExtResource( 2 )
+
+[node name="seamless-2033674_1920" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 394.517, 514.583 )
+texture = ExtResource( 3 )
