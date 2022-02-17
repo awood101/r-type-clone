@@ -20,8 +20,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
 
 func _on_ENEMY_BULLET_body_entered(body):
-	print("hit")
-	body.queue_free()
+	body.hit(self)
 
 func _process(delta):
 	 position += velocity * delta

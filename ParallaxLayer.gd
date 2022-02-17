@@ -6,5 +6,5 @@ var speed
 func _ready():
 	speed = 2
 
-func _process(delta):
+func _process(_delta):
 	self.motion_offset.y += speed

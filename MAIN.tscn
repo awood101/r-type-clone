@@ -1,14 +1,30 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://MAIN.gd" type="Script" id=1]
 [ext_resource path="res://ParallaxLayer.gd" type="Script" id=2]
 [ext_resource path="res://seamless-2033674_1920.jpg" type="Texture" id=3]
+[ext_resource path="res://1shield.png" type="Texture" id=5]
 
 [node name="MAIN" type="Node2D"]
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ],
 "_edit_vertical_guides_": [  ]
+}
+
+[node name="SHIELD_ICON" type="Sprite" parent="."]
+position = Vector2( 30.375, 572.5 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 18.1464
+margin_top = 534.212
+margin_right = 98.1464
+margin_bottom = 618.212
+text = "30.0"
+__meta__ = {
+"_edit_use_anchors_": false
 }
 
 [node name="Timer" type="Timer" parent="."]
